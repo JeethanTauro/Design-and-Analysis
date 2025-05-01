@@ -1,0 +1,37 @@
+package Recursion;
+
+public class Decimal_To_Binary {
+    public static void DecimalToBinary(int decimal){
+        if(decimal==0 ){
+            return;
+        }
+        DecimalToBinary(decimal/2);
+        System.out.print(decimal%2);
+
+    }
+
+    public static void main(String[] args) {
+       DecimalToBinary(4);
+
+    }
+
+    /*
+
+    if(decimal == 0){
+      return 0;
+    }
+    return decimal%2 + 10*DecimalToBinary(decimal/2);
+
+    or
+    public static String DecimalToBinary(int decimal , String result){
+        if(decimal==0 ){
+            return result;
+        }
+        result = decimal%2 + result
+        return DecimalToBinary(decimal/2,result);
+        
+
+    }
+
+    */
+}
